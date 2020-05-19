@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Cajero</title>
 </head>
@@ -11,42 +12,45 @@
     <div class="cajaprincipal">
         <div class="caja1">
             <div class="caja1_1">
-                    <input class="botonseleccion1" type="button" value="" onclick="" />
-                    <input class="botonseleccion2" type="button" value="" onclick="" />
-                    <input class="botonseleccion2" type="button" value="" onclick="" />
-                    <input class="botonseleccion2" type="button" value="" onclick="" />
+                <input class="botonseleccion1" type="button" onclick="" />
+                <input class="botonseleccion2" type="button" onclick="" />
+                <input class="botonseleccion2" type="button" onclick="" />
+                <input class="botonseleccion2" type="button" onclick="" />
             </div>
             <div class="caja1_2">
-                <iframe src="pantalla.html" frameborder="0"></iframe>
+                <div id="pantalla">
+                    <p class="titulo-pantalla">¡Bienvenido al banco!</p>
+                    <p class="letras-pantalla">Porfavor digite su clave</p>
+                    <input type="password" class="caja-password" id="resultado" disabled>
+                </div>
             </div>
             <div class="caja1_3">
-                    <input class="botonseleccion3" type="button" value="" onclick="" />
-                    <input class="botonseleccion4" type="button" value="" onclick="" />
-                    <input class="botonseleccion4" type="button" value="" onclick="" />
-                    <input class="botonseleccion4" type="button" value="" onclick="" />
-            </div>
+                <input class="botonseleccion3" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
         </div>
         <div class="caja2">
             <div class="caja2_1">
-                    <input class="botonnumeros" type="button" value="1" onclick="" />
-                    <input class="botonnumeros" type="button" value="2" onclick="" />
-                    <input class="botonnumeros" type="button" value="3" onclick="" />
-                    <input class="botoncancel" type="button" value="CANCEL" onclick="" />
-                    <div style="clear: both;"></div>
-                    <input class="botonnumeros" type="button" value="4" onclick="" />
-                    <input class="botonnumeros" type="button" value="5" onclick="" />
-                    <input class="botonnumeros" type="button" value="6" onclick="" />
-                    <input class="botonclear" type="button" value="CLEAR" onclick="" />
-                    <div style="clear: both;"></div>
-                    <input class="botonnumeros" type="button" value="7" onclick="" />
-                    <input class="botonnumeros" type="button" value="8" onclick="" />
-                    <input class="botonnumeros" type="button" value="9" onclick="" />
-                    <input class="botonok" type="button" value="OK" onclick="" />
-                    <div style="clear: both;"></div>
-                    <input class="botonnumeros" type="button" disabled/>
-                    <input class="botonnumeros" type="button" value="0" onclick="" />
-                    <input class="botonnumeros" type="button" value="." onclick="" />
-                    <input class="botonbloqueado" type="button" disabled/>
+                <button class="botonnumeros" id="n1">1</button>
+                <button class="botonnumeros" id="n2">2</button>
+                <button class="botonnumeros" id="n3">3</button>
+                <button class="botoncancel" id="cancel">CANCEL</button>
+                <div style="clear: both;"></div>
+                <button class="botonnumeros" id="n4">4</button>
+                <button class="botonnumeros" id="n5">5</button>
+                <button class="botonnumeros" id="n6">6</button>
+                <button class="botonclear" id="clear">CLEAR</button>
+                <div style="clear: both;"></div>
+                <button class="botonnumeros" id="n7">7</button>
+                <button class="botonnumeros" id="n8">8</button>
+                <button class="botonnumeros" id="n9">9</button>
+                <button class="botonok" id="ok">OK</button>
+                <div style="clear: both;"></div>
+                <button class="botonnumeros" disabled></button>
+                <button class="botonnumeros" id="n0">0</button>
+                <button class="botonnumeros" id="np">.</button>
+                <button class="botonbloqueado" disabled></button>
             </div>
             <div class="caja2_2">
                 <div class="cajatexto1">
@@ -81,5 +85,6 @@
             </div>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
