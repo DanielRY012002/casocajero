@@ -1,3 +1,25 @@
+class Cuenta{
+    constructor(password){
+        this.password=password;
+    };
+    verificar(){
+        if (this.password=="123456789") {
+            return("sesion iniciada")
+        } else {
+            return("usuario o contraseña incorrectos")
+        }
+    };
+};
+function login() {
+    var cuenta=new Cuenta(document.getElementById("resultado").value);
+    var candado=cuenta.verificar();
+    if (candado=="sesion iniciada") {
+        document.getElementById("pantalla1").style.display="none";
+        document.getElementById("pantalla2").style.display="block";
+    } else {
+        document.getElementById("ingreso").value=candado;
+    }
+}
 document.getElementById("n1").addEventListener("click",n1);
 function n1(){ 
     let sumado=document.getElementById("n1").innerHTML;

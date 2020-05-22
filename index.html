@@ -19,9 +19,20 @@
             </div>
             <div class="caja1_2">
                 <div id="pantalla">
-                    <p class="titulo-pantalla">¡Bienvenido al banco!</p>
-                    <p class="letras-pantalla">Porfavor digite su clave</p>
-                    <input type="password" class="caja-password" id="resultado" disabled>
+                    <div id="pantalla1">
+                        <p class="titulo-pantalla">¡Bienvenido al banco!</p>
+                        <p class="letras-pantalla">Porfavor digite su clave</p>
+                        <input type="password" class="caja-password" id="resultado" disabled>
+                        <input type="text" id="ingreso" disabled>
+                    </div>
+                    <div id="pantalla2" style="display:none;">
+                        <p>Menu Principal</p>
+                        
+
+                    </div>
+                    <div id="pantalla3" style="display:none;">
+                        <p>ingresar monto de retiro en multiplos de 10</p>
+                    </div>
                 </div>
             </div>
             <div class="caja1_3">
@@ -45,7 +56,7 @@
                 <button class="botonnumeros" id="n7">7</button>
                 <button class="botonnumeros" id="n8">8</button>
                 <button class="botonnumeros" id="n9">9</button>
-                <button class="botonok" id="ok">OK</button>
+                <button class="botonok" id="ok" onclick="login()">OK</button>
                 <div style="clear: both;"></div>
                 <button class="botonnumeros" disabled></button>
                 <button class="botonnumeros" id="n0">0</button>
