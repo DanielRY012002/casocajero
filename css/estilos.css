@@ -169,7 +169,11 @@ body{
 .caja-password{
     border-color:goldenrod;
     border-width:2px;
-    margin-left:10px;
+}
+.caja-monto{
+    border-color:goldenrod;
+    border-width:2px;
+    width:50px;
 }
 .letras{
     margin-top:2px;
@@ -179,15 +183,24 @@ body{
     color:white;
 }
 .titulo-pantalla{
-    margin-left:10px;
     font-size:12px;
     color:black;
     font-family: 'Black Ops One', cursive;
 }
 .letras-pantalla{
-    margin-left:10px;
     font-size:10px;
     color:black;
+    font-family: 'Black Ops One', cursive;
+}
+.letras-opciones{
+    font-size:10px;
+    color:rgb(85, 42, 11);
+    font-family: 'Black Ops One', cursive;
+}
+.letras-error{
+    margin-left:10px;
+    font-size:10px;
+    color:rgb(85, 42, 11);
     font-family: 'Black Ops One', cursive;
 }
 .cajatargeta{

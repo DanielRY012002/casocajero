@@ -10,28 +10,54 @@
 </head>
 <body>
     <div class="cajaprincipal">
-        <div class="caja1">
+        <div class="caja1" id="pantalla1">
             <div class="caja1_1">
-                <input class="botonseleccion1" type="button" onclick="" />
-                <input class="botonseleccion2" type="button" onclick="" />
-                <input class="botonseleccion2" type="button" onclick="" />
-                <input class="botonseleccion2" type="button" onclick="" />
+                <input class="botonseleccion1" type="button">
+                <input class="botonseleccion2" type="button">
+                <input class="botonseleccion2" type="button">
+                <input class="botonseleccion2" type="button">
             </div>
             <div class="caja1_2">
                 <div id="pantalla">
-                    <div id="pantalla1">
-                        <p class="titulo-pantalla">¡Bienvenido al banco!</p>
-                        <p class="letras-pantalla">Porfavor digite su clave</p>
-                        <input type="password" class="caja-password" id="resultado" disabled>
-                        <input type="text" id="ingreso" disabled>
+                    <div>
+                        <p class="titulo-pantalla" style="margin-left:10px;">¡Bienvenido al banco!</p>
+                        <p class="letras-pantalla" style="margin-left:10px;">Porfavor digite su clave</p>
+                        <input type="password" class="caja-password" id="resultado" style="margin-left:10px;" disabled>
+                        <p class="letras-error" id="ingreso"></p>
                     </div>
-                    <div id="pantalla2" style="display:none;">
-                        <p>Menu Principal</p>
-                        
-
-                    </div>
-                    <div id="pantalla3" style="display:none;">
-                        <p>ingresar monto de retiro en multiplos de 10</p>
+                </div>
+            </div>
+            <div class="caja1_3">
+                <input class="botonseleccion3" type="button">
+                <input class="botonseleccion4" type="button">
+                <input class="botonseleccion4" type="button">
+                <input class="botonseleccion4" type="button">
+            </div>
+        </div>
+        <div class="caja1" style="display:none;" id="pantalla2">
+            <div class="caja1_1">
+                <input class="botonseleccion1" type="button" onclick="retiro()"/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+            </div>
+            <div class="caja1_2">
+                <div id="pantalla">
+                    <div>
+                        <div class="titulo-pantalla" style="height:11px;width:99px;margin:auto;">Menu Principal</div>
+                        <div style="height:15px;width:221px;"></div>
+                        <div style="width:85px;height:85px;float:left;">
+                            <p class="letras-opciones"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i> RETIRO</p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i> CONSULTAS</p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i> OPERACIONES</p>
+                            <P class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></P>
+                        </div>
+                        <div style="width:136px;height:85px;float:left;text-align:right;">
+                            <p class="letras-opciones">TRANSFERENCIA <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;">ULTIMOS MOVIMIENTOS <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -40,9 +66,113 @@
                 <input class="botonseleccion4" type="button" onclick="" />
                 <input class="botonseleccion4" type="button" onclick="" />
                 <input class="botonseleccion4" type="button" onclick="" />
+            </div>
+        </div>
+        <div class="caja1" style="display:none;" id="pantalla3">
+            <div class="caja1_1">
+                <input class="botonseleccion1" type="button" onclick="retiro2()"/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+            </div>
+            <div class="caja1_2">
+                <div id="pantalla">
+                    <div>
+                        <div class="titulo-pantalla" style="height:11px;width:41px;margin:auto;">Retiro</div>
+                        <div style="height:15px;width:221px;"></div>
+                        <div style="width:85px;height:85px;float:left;">
+                            <p class="letras-opciones"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i> RETIRO SOLES</p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <P class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></P>
+                        </div>
+                        <div style="width:136px;height:85px;float:left;text-align:right;">
+                            <p class="letras-opciones">RETIRO DOLARES <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;">CANCELAR <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caja1_3">
+                <input class="botonseleccion3" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
+            </div>
+        </div>
+        <div class="caja1" style="display:none;" id="pantalla4">
+            <div class="caja1_1">
+                <input class="botonseleccion1" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+            </div>
+            <div class="caja1_2">
+                <div id="pantalla">
+                    <div>
+                        <div class="titulo-pantalla" style="height:11px;width:41px;margin:auto;">Retiro</div>
+                        <div style="height:15px;width:221px;"></div>
+                        <div style="width:85px;height:85px;float:left;">
+                            <p class="letras-opciones"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i> S/. 300</p>
+                            <P class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></P>
+                        </div>
+                        <div style="width:136px;height:85px;float:left;text-align:right;">
+                            <p class="letras-opciones">S/. 100 <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;">S/. 200<i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;">OTRAS CANTIDADES<i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;">CANCELAR <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caja1_3">
+                <input class="botonseleccion3" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="retiro3()" />
+                <input class="botonseleccion4" type="button" onclick="" />
+            </div>
+        </div>
+        <div class="caja1" style="display:none;" id="pantalla5">
+            <div class="caja1_1">
+                <input class="botonseleccion1" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+                <input class="botonseleccion2" type="button" onclick=""/>
+            </div>
+            <div class="caja1_2">
+                <div id="pantalla">
+                    <div>
+                        <div class="titulo-pantalla" style="height:11px;width:196px;margin:auto;">INGRESE MONTO A RETIRAR EN</div>
+                        <div class="titulo-pantalla" style="height:11px;width:112px;margin:auto;">MULTIPLOS DE 10</div>
+                        <div class="letras-pantalla" style="height:5px;width:221px;margin-left:85px;margin-top:10px;">
+                            S/.<input type="text" class="caja-monto" id="monto" disabled>
+                        </div>
+                        <div style="width:85px;height:85px;float:left;">
+                            <p class="letras-opciones"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;margin-top:12px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:5px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;"><i class="fa fa-caret-right" aria-hidden="true" style="font-size:15px;"></i></p>
+                        </div>
+                        <div style="width:136px;height:85px;float:left;text-align:right;">
+                            <p class="letras-opciones">CONFIRMAR <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;margin-top:12px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:5px;">CORREGIR <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                            <p class="letras-opciones" style="margin-top:6px;">CANCELAR <i class="fa fa-caret-left" aria-hidden="true" style="font-size:15px;"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caja1_3">
+                <input class="botonseleccion3" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="retirogo()" />
+                <input class="botonseleccion4" type="button" onclick="" />
+                <input class="botonseleccion4" type="button" onclick="" />
+            </div>
         </div>
         <div class="caja2">
-            <div class="caja2_1">
+            <div class="caja2_1" id="teclado1">
                 <button class="botonnumeros" id="n1">1</button>
                 <button class="botonnumeros" id="n2">2</button>
                 <button class="botonnumeros" id="n3">3</button>
@@ -51,7 +181,7 @@
                 <button class="botonnumeros" id="n4">4</button>
                 <button class="botonnumeros" id="n5">5</button>
                 <button class="botonnumeros" id="n6">6</button>
-                <button class="botonclear" id="clear">CLEAR</button>
+                <button class="botonclear" id="clear" onclick="limpiar()">CLEAR</button>
                 <div style="clear: both;"></div>
                 <button class="botonnumeros" id="n7">7</button>
                 <button class="botonnumeros" id="n8">8</button>
@@ -61,6 +191,27 @@
                 <button class="botonnumeros" disabled></button>
                 <button class="botonnumeros" id="n0">0</button>
                 <button class="botonnumeros" id="np">.</button>
+                <button class="botonbloqueado" disabled></button>
+            </div>
+            <div class="caja2_1" id="teclado2" style="display:none;">
+                <button class="botonnumeros" id="n11">1</button>
+                <button class="botonnumeros" id="n22">2</button>
+                <button class="botonnumeros" id="n33">3</button>
+                <button class="botoncancel" id="cancel2">CANCEL</button>
+                <div style="clear: both;"></div>
+                <button class="botonnumeros" id="n44">4</button>
+                <button class="botonnumeros" id="n55">5</button>
+                <button class="botonnumeros" id="n66">6</button>
+                <button class="botonclear" id="clear2">CLEAR</button>
+                <div style="clear: both;"></div>
+                <button class="botonnumeros" id="n77">7</button>
+                <button class="botonnumeros" id="n88">8</button>
+                <button class="botonnumeros" id="n99">9</button>
+                <button class="botonok" id="ok2" onclick="">OK</button>
+                <div style="clear: both;"></div>
+                <button class="botonnumeros" disabled></button>
+                <button class="botonnumeros" id="n00">0</button>
+                <button class="botonnumeros" id="npp">.</button>
                 <button class="botonbloqueado" disabled></button>
             </div>
             <div class="caja2_2">
